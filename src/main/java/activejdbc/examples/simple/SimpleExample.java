@@ -8,11 +8,11 @@ public class SimpleExample {
     final static Logger logger = LoggerFactory.getLogger(SimpleExample.class);
     public static void main(String[] args) {
 
-        Base.open("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/test", "root", "p@ssw0rd");
+    	Base.open("org.postgresql.Driver", "jdbc:postgresql://localhost:5432/testactivejdbc", "postgres", "12345");
 
         createEmployee();
-        logger.info("=========> Created employee:");
-        selectEmployee();
+        logger.info("=========> Created demployee:");
+/*        selectEmployee();
         updateEmployee();
         logger.info("=========> Updated employee:");
         selectAllEmployees();
@@ -24,7 +24,7 @@ public class SimpleExample {
         selectEmployee();
         deleteAllEmployees();
         logger.info("=========> Deleted all employees:");
-        selectAllEmployees();
+        selectAllEmployees();*/
 
         Base.close();
     }
